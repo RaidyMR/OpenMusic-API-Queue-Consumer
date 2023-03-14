@@ -24,8 +24,11 @@ class PlaylistService {
       throw new NotFoundError('Playlist tidak ditemukan');
     }
     resultPlaylist.rows[0].songs = resultSong.rows;
+    const playlist = {
+      "playlist": resultPlaylist.rows[0],
+    };
 
-    return resultPlaylist.rows[0];
+    return playlist;
   }
 }
 
